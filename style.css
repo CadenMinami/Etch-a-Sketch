@@ -3,7 +3,14 @@
     flex-grow: 1;
 }
 
-#column {
+.column {
     display: flex;
     flex-direction: column;
+}
+
+.divChild {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+
 }
