@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hoveritem.forEach(Element => {
         Element.addEventListener("mouseover", applyHover)
-        Element.addEventListener("mouseout", removeHover)
+        //Element.addEventListener("mouseout", removeHover)
     })
     function createGrid(gridSize) {
         divContainer.innerHTML = "";
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const divBox = document.createElement("div");
                 divBox.classList.add("divChild");
                 divBox.addEventListener("mouseover", applyHover);
-                divBox.addEventListener("mouseout", removeHover);
+                //divBox.addEventListener("mouseout", removeHover);
                 divColumn.appendChild(divBox);
             }
         }
