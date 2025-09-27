@@ -2,22 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch A Sketch Project</title>
-    <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <script src="etch-a-sketch.js"> </script>
+    <script src="etch-a-sketch.js" defer></script>
     <div class="background">
-        <h1>Draw</h1>
-        <button id="gridSize">Adjust Grid Size</button>
-        <div id="container"></div>
-        <div>
-            <button id="reset">Shake</button>
+        <h1>Etch-a-Sketch</h1>
+        <div id="controls">
+            <label for="gridSizeInput">Grid Size:</label>
+            <input type="number" id="gridSizeInput" min="8" max="64" value="16" />
+            <label for="penColorInput">Pen Color:</label>
+            <input type="color" id="penColorInput" value="#000000" />
+            <button id="resetButton">Reset</button>
         </div>
+        <div id="container"></div>
     </div>
 </body>
 
