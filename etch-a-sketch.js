@@ -1,18 +1,6 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const divContainer = document.getElementById("container");
-    const GRIDSIZE = 16;
-    createGrid(GRIDSIZE);
-
-
-    //Adding the hover functionality of the etch-a-sketch
-    const hoveritem = document.querySelectorAll("div.divChild");
-
-    hoveritem.forEach(Element => {
-        Element.addEventListener("mouseover", applyHover)
-        //Element.addEventListener("mouseout", removeHover)
-    })
     function createGrid(gridSize) {
         divContainer.innerHTML = "";
         for (let j = 0; j < gridSize; j++) {
@@ -23,21 +11,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 const divBox = document.createElement("div");
                 divBox.classList.add("divChild");
                 divBox.addEventListener("mouseover", applyHover);
-                //divBox.addEventListener("mouseout", removeHover);
                 divColumn.appendChild(divBox);
             }
         }
 
     }
-
-
     function applyHover(event) {
-        event.target.style.backgroundColor = "red";
+        event.target.style.backgroundColor = "black";
     }
 
-    function removeHover(event) {
-        event.target.style.backgroundColor = "";
-    }
+   
+    const divContainer = document.getElementById("container");
+    const GRIDSIZE = 16;
+    createGrid(GRIDSIZE);
+
+
+    //Adding the hover functionality of the etch-a-sketch
+    const hoveritem = document.querySelectorAll("div.divChild");
+
+    hoveritem.forEach(Element => {
+        Element.addEventListener("mouseover", applyHover)
+    })
+
     const gridSizeAdjustorBtn = document.getElementById("gridSize");
     gridSizeAdjustorBtn.addEventListener("click", () => {
         let userInput = prompt("Enter desired amount of squares per side: (Max 100)")
@@ -53,5 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         createGrid(size);
     });
+
+    
 
 });

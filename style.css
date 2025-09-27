@@ -1,16 +1,37 @@
+html {
+    background-color: #e30022;
+}
+
 #container {
     display: flex;
     flex-grow: 1;
+    justify-content: center;
+    padding: 16px;
 }
 
-.column {
+.column,
+.background {
     display: flex;
     flex-direction: column;
 }
 
-.divChild {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #000;
 
+.divChild {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    background-color: #C0C0C0;
+
+}
+
+h1,
+button {
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #d4af37;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #d4af3750;
 }
